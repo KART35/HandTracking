@@ -64,3 +64,13 @@ void RelitiveHand::GetData(Leap::Frame frame)
 		this->t.z = hand.finger(thumbId).stabilizedTipPosition().z;
 	}
 }
+
+void RelitiveHand::PackageData()
+{
+	//TODO: thumb
+
+	for(char i = 0; i<=4; i++)
+	{
+		float fingerPos = this->fingers[i].pos;
+	}
+}

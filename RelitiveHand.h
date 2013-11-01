@@ -19,6 +19,7 @@ public:
 	RelitiveHand();
 	RelitiveHand(AbsoluteHand h);
 	void GetData(Leap::Frame frame);
-
+	void PackageData();
+	void pre();
 
 };
