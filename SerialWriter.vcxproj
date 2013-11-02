@@ -85,7 +85,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AbsoluteHand.h" />
     <ClInclude Include="Hand.h" />
     <ClInclude Include="RelitiveHand.h" />
     <ClInclude Include="SerialWriter.h" />
@@ -93,7 +92,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AbsoluteHand.cpp" />
     <ClCompile Include="RelitiveHand.cpp" />
     <ClCompile Include="SerialWriter.cpp" />
     <ClCompile Include="stdafx.cpp">

@@ -67,10 +67,25 @@ void RelitiveHand::GetData(Leap::Frame frame)
 
 void RelitiveHand::PackageData()
 {
+	uint8_t finger_pack[4];
+	ThumbIK();
 	//TODO: thumb
 
-	for(char i = 0; i<=4; i++)
+	for(char i,k = 0; i<=4; i++)
 	{
 		float fingerPos = this->fingers[i].pos;
+		finger_pack[k]= abs(fingerPos); //max value should only be 180
+		k++;
+		k++;
+		finger_pack[k]=~i; //BIN_NOT(index) for the delimiters
 	}
+}
+
+void RelitiveHand::ThumbIK()
+{
+	return;
+}
+
+char * RelitiveHand::GetThumbData(){
+return 0;
 }

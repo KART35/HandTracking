@@ -1,13 +1,13 @@
 #pragma once
 #include "stdafx.h"
-#include "AbsoluteHand.h"
 #include "Hand.h"
 
 class RelitiveHand {
 	thumb t;
+	thumb t_out;
 	finger fingers[5]; //one is actually a thumb
 	uint32_t id;
-
+	char package[14];
 	Leap::Vector handXBasis;
 	Leap::Vector handYBasis;
 	Leap::Vector handZBasis;
@@ -17,9 +17,9 @@ class RelitiveHand {
 
 public:
 	RelitiveHand();
-	RelitiveHand(AbsoluteHand h);
 	void GetData(Leap::Frame frame);
 	void PackageData();
-	void pre();
+	char * GetThumbData();
+	void ThumbIK();
 
 };
